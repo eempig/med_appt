@@ -1,37 +1,29 @@
-// Import necessary modules from React library
-import React, { useEffect } from 'react';
-
-// Import components for routing from react-router-dom library
+// filepath: /Users/eee/projects/med_appt/src/App.js
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-// Import custom Navbar component
 import Navbar from './Components/Navbar/Navbar';
+import Landing_Page from './Components/Landing_Page/Landing_Page';
+import Sign_Up from './Components/Sign_Up/Sign_Up';
+import Login from './Components/Login/Login';
+import './App.css';
 
-// Function component for the main App
 function App() {
-
-  // Render the main App component
   return (
     <div className="App">
-        {/* Set up BrowserRouter for routing */}
         <BrowserRouter>
-          {/* Display the Navbar component */}
-          <Navbar/>
-
-          {/* Set up the Routes for different pages */}
+          <Navbar />
           <Routes>
-            {/* Define individual Route components for different pages */}
-            {/* Example routes */}
             <Route path="/home" element={<h1>Home Page</h1>} />
             <Route path="/appointments" element={<h1>Appointments Page</h1>} />
             <Route path="/profile" element={<h1>Profile Page</h1>} />
             <Route path="/contact" element={<h1>Contact Page</h1>} />
-            <Route path="/" element={<h1>Welcome to StayHealthy</h1>} />
+            <Route path="/sign_up" element={<Sign_Up />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Landing_Page />} />
           </Routes>
         </BrowserRouter>
     </div>
   );
 }
 
-// Export the App component as the default export
 export default App;

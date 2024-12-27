@@ -82,7 +82,7 @@
 
 /* Styles for form controls in the signup form */
 .form-control {
-    width: 40%; /* Set width of form controls */
+    width: 100%; /* Set width of form controls to 100% */
     padding: 8px; /* Add padding inside form controls */
     font-size: 16px; /* Set font size */
     border: 1px solid #ccc; /* Add border with color */
@@ -114,4 +114,11 @@
 .btn-danger {
     background-color: #dc3545; /* Set background color for danger button */
     color: #fff; /* Set text color for danger button */
+}
+
+/* Styles for validation error messages */
+.error {
+    color: red; /* Set text color to red */
+    font-size: 0.875rem; /* Set font size */
+    margin-top: 0.25rem; /* Add top margin */
 }
